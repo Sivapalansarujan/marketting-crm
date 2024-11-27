@@ -1,0 +1,53 @@
+/* src/styles/IconBox.css */
+.icon-box-container {
+  display: flex; /* Flexbox layout for horizontal arrangement */
+  justify-content: space-between; /* Distribute boxes evenly */
+  gap: 0; /* Remove space between icon boxes */
+  margin: 200px auto; /* Center the container and add margin */
+  max-width: 1100px; /* Max width for responsiveness */
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+.icon-box {
+  text-align: center; /* Center text */
+  padding: 60px; /* Padding inside each icon box */
+  background: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for 3D effect */
+  flex: 1; /* Equal width for each box */
+  transition: all 0.3s ease; /* Smooth transition for scaling */
+  border: 1px solid #ddd; /* Temporary border for debugging */
+}
+
+.icon-box-middle {
+  transform: scale(1.1); /* Make the middle box bigger */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Larger shadow for middle box */
+}
+
+.icon-box i {
+  font-size: 40px; /* Icon size */
+  color: #f36637; /* Icon color */
+  margin-bottom: 15%; /* Space between icon and text */
+}
+
+.icon-img {
+  width: 60px; /* Set width for custom icons */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image maintains aspect ratio */
+  margin-bottom: 15px; /* Space between icon and text */
+}
+
+.icon-box h3 {
+  font-size: 1.5rem; /* Font size for title */
+  margin-bottom: 10px; /* Space between title and description */
+}
+
+.icon-box p {
+  font-size: 1rem; /* Font size for description */
+  color: #555; /* Color for description text */
+}
+
+/* Optional: Add hover effect for icon boxes */
+.icon-box:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
+  transform: translateY(-5px); /* Slight lift effect */
+}

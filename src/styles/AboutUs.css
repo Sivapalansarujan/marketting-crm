@@ -1,0 +1,74 @@
+/* src/styles/AboutUs.css */
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    width: 100vw;
+}
+
+.about-us-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.about-left-column {
+    flex: 1;
+    text-align: center;
+    padding-right: 50px;
+    padding-top : 100px;
+}
+
+.about-subheading {
+    font-size: 1.3rem;
+    color: #f36637;
+    margin-bottom: 15px;
+}
+
+.about-heading {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-btn {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #B40508 0%, #F36637 100%); /* Gradient background */
+    color: white;
+    border-radius: 5px;
+    border: none; /* Ensures no default borders */
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .about-btn:hover {
+    background: linear-gradient(90deg, #F36637 0%, #B40508 100%); /* Reversed gradient on hover */
+  }
+  
+
+.about-right-column {
+    flex: 1;
+    background-image: url('../assets/aboutus_bg.png'); /* Background image for right column */
+    background-size: 200%; /* Zoom in by scaling the image to 200% */
+    background-position: center center; /* Keep the image centered */
+    background-repeat: no-repeat;
+    height: 400px; /* Height of the right column */
+    margin-left: 1px; /* Increase margin on all sides */
+    padding-left: 0; /* Remove any left padding */
+  }
+  
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 50px; /* Adjust positioning of image */
+}

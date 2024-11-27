@@ -1,0 +1,66 @@
+/* src/styles/Header.css */
+
+/* General header styles */
+header {
+  background-color:transparent;
+  padding: 1rem;
+  margin-top: 100px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space out logo and navigation bar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styles */
+.logo {
+  flex: 0 0 auto; /* Keep the logo's natural size */
+  width: 75px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation styles */
+nav {
+  flex: 1; /* Allow nav to occupy space between logo and button */
+  display: flex;
+  justify-content: center; /* Center menu items */
+  align-items: center; /* Vertically align items */
+  position: relative; /* Position relative to place button inside nav */
+}
+
+nav ul {
+  display: flex; /* Keep menu items inline */
+  list-style: none;
+  gap: 2rem; /* Add space between menu items */
+  margin: 0; /* Remove default padding/margin */
+  padding: 0;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Add hover effect for links */
+}
+
+/* Button styles */
+.nav-btn {
+  position: absolute; /* Position the button independently inside nav */
+  right: 0; /* Align button to the right edge of the nav bar */
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #B40508 0%, #F36637 120.86%); /* Gradient background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.nav-btn:hover {
+  background: linear-gradient(90deg, #F36637 0%, #B40508 120.86%); /* Reversed gradient on hover */
+}

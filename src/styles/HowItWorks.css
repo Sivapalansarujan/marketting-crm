@@ -1,0 +1,117 @@
+/* Container for the whole page */
+.how-it-works {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the entire content on the page */
+    justify-content: center;
+    width: 100%; /* Reduce the width of the main container */
+    max-width: 1480px; /* Optional: set a max-width to prevent it from being too wide on large screens */
+    margin: 150px auto; /* Center the container horizontally */
+  }
+  
+  /* First container styles */
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .heading-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sub-heading {
+    font-size: 24px;
+    color: orangered;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    color: #222;
+    font-weight: bold;
+  }
+  
+  /* Image container */
+  .image-container {
+    display: flex;
+    justify-content: flex-start; /* Align the image to the left */
+    width: 60%;
+    max-width: 900px; /* Optional: restrict max width */
+  }
+  
+  .hiw-image {
+    width: 100%; /* Reduced to 60% for smaller size */
+    max-width: 600px; /* Restrict max-width */
+    height: auto;
+    margin-top: -220px;
+    margin-left: -420px; /* Move the image towards the left */
+  }
+  
+  /* Second container styles */
+  .second-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center; /* Center the sections as a whole */
+    width: 80%;
+    margin-top: -350px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center; /* Center the entire row */
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section1 {
+    width: 60%; /* Make Section 1 wider */
+    text-align: left; /* Align the content of Section 1 to the left */
+    align-items: flex-start; /* Left-align all content inside Section 1 */
+  }
+  
+  .number-circle {
+    background-color: orange;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .section-heading {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .section-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .section2 {
+    width: 35%; /* Make Section 2 smaller */
+    display: flex;
+    justify-content: center; /* Center Section 2 content */
+  }
+  
+  .section-image {
+    width: 100%;
+    max-width: 350px; /* Ensure image doesn't exceed max-width */
+    height: auto;
+  }
+  

@@ -1,0 +1,74 @@
+/* src/styles/Hero.css */
+.hero {
+  background-size: cover; /* Make the background fill the section */
+  background-position: top center; /* Align the background to the top center */
+  background-repeat: no-repeat; /* Prevent background tiling */
+  padding: 50px 0; /* Maintain padding for content spacing */
+  background-image: url('../assets/Rectangle.png');
+  margin-top: -100px; /* Move the hero section upwards */
+}
+
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .left-column {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    color: #1f0505;
+    
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    background: linear-gradient(90deg, #B40508 0%, #F36637 120.86%); /* Gradient background */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .hero-btn:hover {
+    background: linear-gradient(90deg, #F36637 0%, #B40508 120.86%); /* Reversed gradient on hover */
+  }
+  
+  
+  .right-column {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .hero-img {
+    width: 150%; /* Increase size by 50% */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    position: relative; /* Enable offset adjustments */
+    right: 50%; /* Move towards the left */
+    top:125px; /* Move towards the bottom */
+  }
+  .group-img {
+    position: absolute; /* Position relative to hero section */
+    left: -5%; /* Adjust left margin overlap */
+    top: 60%; /* Adjust vertical alignment */
+    transform: translateY(-50%); /* Center vertically */
+    width: 200px; /* Adjust size of the image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1; /* Push it behind the content */
+    opacity: 1; /* Add slight transparency for a fused effect */
+  }

@@ -1,0 +1,146 @@
+/* src/components/Contact.css */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .contact-info-left {
+    width: 40%; /* Adjusting width to give space for the form */
+    height: auto; /* Ensure height adjusts to content */
+    min-height: 300px; /* Increase minimum height */
+    background-color: white;
+    border: 1px solid #ffcccc; /* Thin red border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Black shadow */
+    padding: 20px; /* Add padding for spacing inside */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  
+  .contact-info-right {
+    width: 55%; /* The form takes up 60% of the space */
+    padding-left: 15px; /* Adds some space between the contact info and form */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-item img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Form Section (Now positioned inside contact-info-right) */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px; /* Add padding for spacing inside */
+    border-radius: 8px; /* Optional: Rounded corners */
+    position: relative;
+    left: -30px; /* Adjust position slightly to the left */
+    z-index: 1; /* Ensure it overlaps other elements if necessary */
+  }
+  
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+    
+  }
+  .select-subject-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-row input,
+  .contact-form select {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .contact-form textarea {
+    width: 96%;
+
+  }
+  
+  .contact-form select {
+    width: 100%;
+  }
+  
+  .bulletin-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .bulletin {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .bulletin span {
+    margin-right: 10px;
+  }
+  
+  .bulletin.active {
+    color: green;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    padding: 10px 15px; /* Reduced padding for a smaller button */
+    background: linear-gradient(90deg, #F36637 0%, #EF3237 100%); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+    width: fit-content; /* Ensures the button fits the text size */
+    margin-left: auto; /* Pushes the button to the right */
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(90deg, #EF3237 0%, #F36637 100%); /* Reversed gradient on hover */
+  }
+  
+  
+  
+  /* Map Section (Now 100% width within the contact-info-left) */
+  .contact-map {
+    margin-top: 20px; /* Adds space between the map iframe and the address */
+    width: 100%; /* Ensures map takes full width */
+  }
+  
