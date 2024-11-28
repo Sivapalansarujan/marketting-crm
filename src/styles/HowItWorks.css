@@ -1,117 +1,259 @@
 /* Container for the whole page */
 .how-it-works {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the entire content on the page */
-    justify-content: center;
-    width: 100%; /* Reduce the width of the main container */
-    max-width: 1480px; /* Optional: set a max-width to prevent it from being too wide on large screens */
-    margin: 150px auto; /* Center the container horizontally */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content within the container */
+  justify-content: center;
+  width: 100%; /* Full width of the container */
+  max-width: 1480px; /* Limit maximum width for large screens */
+  margin: 150px auto; /* Center the container both horizontally and vertically */
+}
+
+
+/* First container styles */
+.first-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.heading-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 24px;
+  color: orangered;
+}
+
+.main-heading {
+  font-size: 36px;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Align the image to the left */
+  width: 60%;
+  max-width: 900px; /* Optional: restrict max width */
+}
+
+.hiw-image {
+  width: 100%; /* Reduced to 60% for smaller size */
+  max-width: 600px; /* Restrict max-width */
+  height: auto;
+  margin-top: -220px;
+  margin-left: -420px; /* Move the image towards the left */
+}
+
+/* Second container styles */
+.second-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center; /* Center the sections as a whole */
+  width: 80%;
+  margin-top: -350px;
+}
+
+.row {
+  display: flex;
+  justify-content: center; /* Center the entire row */
+  gap: 30px;
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section1 {
+  width: 60%; /* Make Section 1 wider */
+  text-align: left; /* Align the content of Section 1 to the left */
+  align-items: flex-start; /* Left-align all content inside Section 1 */
+}
+
+.number-circle {
+  background-color: orange;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.section-heading {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.section2 {
+  width: 35%; /* Make Section 2 smaller */
+  display: flex;
+  justify-content: center; /* Center Section 2 content */
+}
+
+.section-image {
+  width: 100%;
+  max-width: 350px; /* Ensure image doesn't exceed max-width */
+  height: auto;
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .how-it-works {
+    margin: 50px auto; /* Adjust top margin for smaller screens */
+    padding: 0 20px; /* Add padding to prevent content from touching screen edges */
   }
-  
-  /* First container styles */
-  .first-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  
-  .heading-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .sub-heading {
-    font-size: 24px;
-    color: orangered;
-  }
-  
-  .main-heading {
-    font-size: 36px;
-    color: #222;
-    font-weight: bold;
-  }
-  
-  /* Image container */
+
   .image-container {
-    display: flex;
-    justify-content: flex-start; /* Align the image to the left */
-    width: 60%;
-    max-width: 900px; /* Optional: restrict max width */
+    width: 80%; /* Reduce width of the image container */
+    justify-content: center; /* Center the image */
   }
-  
+
   .hiw-image {
-    width: 100%; /* Reduced to 60% for smaller size */
-    max-width: 600px; /* Restrict max-width */
-    height: auto;
-    margin-top: -220px;
-    margin-left: -420px; /* Move the image towards the left */
+    margin-left: 0; /* Remove left margin */
+    margin-top: -100px; /* Adjust top margin */
+    max-width: 500px; /* Adjust image size */
   }
-  
-  /* Second container styles */
+
   .second-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center; /* Center the sections as a whole */
-    width: 80%;
-    margin-top: -350px;
+    margin-top: -200px; /* Reduce negative margin */
+    width: 90%; /* Adjust width of the second container */
   }
-  
+
   .row {
-    display: flex;
-    justify-content: center; /* Center the entire row */
-    gap: 30px;
-    width: 100%;
+    flex-direction: column; /* Stack the rows vertically */
+    align-items: center; /* Center the rows */
   }
-  
-  .section {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .section1 {
-    width: 60%; /* Make Section 1 wider */
-    text-align: left; /* Align the content of Section 1 to the left */
-    align-items: flex-start; /* Left-align all content inside Section 1 */
+    width: 80%; /* Make Section 1 occupy more space */
+    text-align: center; /* Center-align text */
   }
-  
-  .number-circle {
-    background-color: orange;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .section-heading {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .section-text {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
+
   .section2 {
-    width: 35%; /* Make Section 2 smaller */
-    display: flex;
-    justify-content: center; /* Center Section 2 content */
+    width: 80%; /* Make Section 2 occupy more space */
+    justify-content: center; /* Center the content */
   }
-  
+
+  .section-heading {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .section-text {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .number-circle {
+    width: 40px; /* Make circle smaller */
+    height: 40px; /* Make circle smaller */
+    font-size: 20px; /* Smaller font size */
+  }
+
   .section-image {
-    width: 100%;
-    max-width: 350px; /* Ensure image doesn't exceed max-width */
-    height: auto;
+    max-width: 300px; /* Adjust image size for smaller screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .first-container {
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  .main-heading {
+    font-size: 28px; /* Reduce font size */
+  }
+
+  .hiw-image {
+    max-width: 400px; /* Further reduce image size */
+    margin-top: -80px; /* Adjust vertical positioning */
+  }
+
+  .second-container {
+    margin-top: -150px; /* Adjust margin for smaller screens */
+  }
+
+  .section-heading {
+    font-size: 16px; /* Reduce font size for section headings */
+  }
+
+  .section-text {
+    font-size: 14px; /* Reduce font size for section text */
+  }
+
+  .number-circle {
+    width: 35px; /* Smaller circle */
+    height: 35px; /* Smaller circle */
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .section-image {
+    max-width: 250px; /* Adjust image size */
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works {
+    margin: 30px auto; /* Adjust top margin */
+  }
+
+  .main-heading {
+    font-size: 22px; /* Further reduce font size */
+  }
+
+  .hiw-image {
+    max-width: 300px; /* Reduce image size further */
+    margin-top: -60px; /* Adjust top margin */
+  }
+
+  .second-container {
+    margin-top: -100px; /* Reduce margin */
+    width: 95%; /* Make the second container full width */
+  }
+
+  .section1 {
+    width: 100%; /* Section 1 takes full width */
+    text-align: center; /* Center text */
+  }
+
+  .section2 {
+    width: 100%; /* Section 2 takes full width */
+    justify-content: center; /* Center content */
+  }
+
+  .section-heading {
+    font-size: 14px; /* Further reduce font size */
+  }
+
+  .section-text {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .number-circle {
+    width: 30px; /* Smaller circle */
+    height: 30px; /* Smaller circle */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .section-image {
+    max-width: 200px; /* Further reduce image size */
+  }
+}

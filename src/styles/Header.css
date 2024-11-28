@@ -2,7 +2,7 @@
 
 /* General header styles */
 header {
-  background-color:transparent;
+  background-color: transparent;
   padding: 1rem;
   margin-top: 100px;
 }
@@ -13,6 +13,7 @@ header {
   justify-content: space-between; /* Space out logo and navigation bar */
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
 
 /* Logo styles */
@@ -29,6 +30,7 @@ nav {
   justify-content: center; /* Center menu items */
   align-items: center; /* Vertically align items */
   position: relative; /* Position relative to place button inside nav */
+  margin-left: auto; /* Ensure the nav stays aligned to the left */
 }
 
 nav ul {
@@ -63,4 +65,83 @@ nav a:hover {
 
 .nav-btn:hover {
   background: linear-gradient(90deg, #F36637 0%, #B40508 120.86%); /* Reversed gradient on hover */
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1rem; /* Reduce padding for medium screens */
+    flex-wrap: wrap; /* Allow logo and nav to stack if necessary */
+  }
+
+  .logo {
+    width: 60px; /* Adjust logo size for medium screens */
+  }
+
+  nav {
+    flex: 1;
+    justify-content: flex-start; /* Align items to the left */
+    margin-left: 0; /* Remove margin for alignment */
+  }
+
+  nav ul {
+    gap: 1.5rem; /* Reduce gap between menu items */
+  }
+
+  .nav-btn {
+    position: relative; /* Adjust button position */
+    margin-left: auto; /* Align the button to the right */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack logo and nav vertically on smaller screens */
+    align-items: center; /* Center align everything */
+    text-align: center;
+  }
+
+  .logo {
+    width: 50px; /* Adjust logo size for mobile screens */
+  }
+
+  nav {
+    width: 100%; /* Allow the nav to take full width */
+    margin-left: 0; /* Remove margin */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 1rem; /* Reduce gap for vertical stack */
+  }
+
+  .nav-btn {
+    position: relative; /* Adjust button position */
+    margin-left: 0; /* Align the button to the left */
+    width: 100%; /* Make the button full width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.5rem; /* Reduce padding for very small screens */
+  }
+
+  .logo {
+    width: 45px; /* Adjust logo size for very small screens */
+  }
+
+  nav {
+    width: 100%; /* Full-width navigation */
+    margin-left: 0;
+  }
+
+  nav ul {
+    gap: 1rem; /* Reduced gap */
+  }
+
+  .nav-btn {
+    padding: 8px 16px; /* Smaller padding for button */
+    font-size: 14px; /* Smaller font size */
+  }
 }

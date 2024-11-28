@@ -1,4 +1,4 @@
-/* src/styles/AboutUs.css */
+/* About Us Section */
 .about-us-section {
     display: flex;
     justify-content: center;
@@ -14,11 +14,12 @@
     justify-content: space-between;
 }
 
+/* Left Column */
 .about-left-column {
     flex: 1;
     text-align: center;
     padding-right: 50px;
-    padding-top : 100px;
+    padding-top: 100px;
 }
 
 .about-subheading {
@@ -47,13 +48,13 @@
     border: none; /* Ensures no default borders */
     cursor: pointer;
     transition: background 0.3s; /* Smooth transition for hover effect */
-  }
-  
-  .about-btn:hover {
-    background: linear-gradient(90deg, #F36637 0%, #B40508 100%); /* Reversed gradient on hover */
-  }
-  
+}
 
+.about-btn:hover {
+    background: linear-gradient(90deg, #F36637 0%, #B40508 100%); /* Reversed gradient on hover */
+}
+
+/* Right Column */
 .about-right-column {
     flex: 1;
     background-image: url('../assets/aboutus_bg.png'); /* Background image for right column */
@@ -63,12 +64,134 @@
     height: 400px; /* Height of the right column */
     margin-left: 1px; /* Increase margin on all sides */
     padding-left: 0; /* Remove any left padding */
-  }
-  
+}
 
+/* Right column image */
 .about-image {
     max-width: 100%;
     height: auto;
     display: block;
     margin-top: 50px; /* Adjust positioning of image */
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .about-us-section {
+        padding: 50px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-us-container {
+        flex-direction: column; /* Stack the left and right columns vertically */
+        align-items: center; /* Center the columns */
+        text-align: center; /* Center the text */
+    }
+
+    .about-left-column {
+        padding-right: 0; /* Remove right padding */
+        padding-top: 50px; /* Reduce top padding */
+    }
+
+    .about-subheading {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .about-heading {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .about-text {
+        font-size: 0.9rem; /* Adjust font size */
+        margin-bottom: 20px; /* Adjust bottom margin */
+    }
+
+    .about-btn {
+        padding: 12px 25px; /* Reduce button padding */
+    }
+
+    .about-right-column {
+        height: 300px; /* Reduce height for smaller screens */
+        background-size: 150%; /* Scale background image down */
+    }
+
+    .about-image {
+        margin-top: 30px; /* Adjust image positioning */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-section {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .about-left-column {
+        padding-top: 30px; /* Adjust top padding */
+    }
+
+    .about-subheading {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .about-heading {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .about-text {
+        font-size: 0.85rem; /* Adjust font size */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .about-btn {
+        padding: 10px 20px; /* Reduce padding */
+    }
+
+    .about-right-column {
+        height: 250px; /* Further reduce height */
+        background-size: 120%; /* Further scale background image */
+    }
+
+    .about-image {
+        max-width: 90%; /* Adjust image size */
+        margin-top: 20px; /* Adjust image positioning */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-section {
+        padding: 30px 10px; /* Adjust padding for very small screens */
+    }
+
+    .about-us-container {
+        width: 100%; /* Ensure full width for the container */
+    }
+
+    .about-left-column {
+        padding-top: 20px; /* Adjust padding */
+    }
+
+    .about-subheading {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .about-heading {
+        font-size: 1.6rem; /* Adjust font size */
+    }
+
+    .about-text {
+        font-size: 0.8rem; /* Adjust font size */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .about-btn {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .about-right-column {
+        height: 200px; /* Reduce height */
+        background-size: 100%; /* Scale background image down further */
+    }
+
+    .about-image {
+        max-width: 80%; /* Further reduce image size */
+        margin-top: 10px; /* Adjust image positioning */
+    }
 }

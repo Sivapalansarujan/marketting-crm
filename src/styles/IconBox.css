@@ -1,4 +1,4 @@
-/* src/styles/IconBox.css */
+/* Icon Box Container */
 .icon-box-container {
   display: flex; /* Flexbox layout for horizontal arrangement */
   justify-content: space-between; /* Distribute boxes evenly */
@@ -8,6 +8,7 @@
   padding: 0 20px; /* Add horizontal padding */
 }
 
+/* Individual Icon Boxes */
 .icon-box {
   text-align: center; /* Center text */
   padding: 60px; /* Padding inside each icon box */
@@ -50,4 +51,80 @@
 .icon-box:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Hover shadow effect */
   transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .icon-box-container {
+    flex-direction: column; /* Stack the icon boxes vertically */
+    align-items: center; /* Center the boxes */
+    padding: 0 10px; /* Add more padding for better mobile spacing */
+  }
+
+  .icon-box {
+    width: 80%; /* Make each icon box take up more width */
+    margin-bottom: 20px; /* Add space between icon boxes */
+    padding: 40px; /* Reduce padding for smaller screens */
+  }
+
+  .icon-box-middle {
+    transform: scale(1); /* Remove scaling effect for middle box */
+  }
+
+  .icon-box i {
+    font-size: 35px; /* Adjust icon size */
+  }
+
+  .icon-box h3 {
+    font-size: 1.3rem; /* Adjust heading font size */
+  }
+
+  .icon-box p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-box-container {
+    padding: 0 5px; /* More padding for smaller screens */
+  }
+
+  .icon-box {
+    width: 100%; /* Each icon box takes up full width */
+    padding: 30px; /* Reduce padding */
+  }
+
+  .icon-box i {
+    font-size: 30px; /* Adjust icon size for smaller screens */
+  }
+
+  .icon-box h3 {
+    font-size: 1.2rem; /* Adjust heading font size */
+  }
+
+  .icon-box p {
+    font-size: 0.85rem; /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-box-container {
+    padding: 0 5px; /* Ensure padding is optimized for very small screens */
+  }
+
+  .icon-box {
+    padding: 20px; /* Reduce padding */
+  }
+
+  .icon-box i {
+    font-size: 25px; /* Smaller icon size */
+  }
+
+  .icon-box h3 {
+    font-size: 1rem; /* Adjust heading font size */
+  }
+
+  .icon-box p {
+    font-size: 0.8rem; /* Adjust paragraph font size */
+  }
 }

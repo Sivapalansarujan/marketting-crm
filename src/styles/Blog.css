@@ -1,22 +1,27 @@
-/* src/styles/Blog.css */
 .blog-section {
+    display: flex;
+    flex-direction: column; /* Stack the heading and the blog container vertically */
+    align-items: center; /* Center-align the content horizontally */
     padding: 40px 10px;
-    text-align: center;
+    margin-top: 125px;
+    text-align: center; /* Center the text */
 }
 
 .blog-heading {
     font-size: 24px;
     color: black;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduce bottom margin for tighter spacing */
+    text-align: center;  
 }
 
 .blog-container {
     display: flex;
-    justify-content: center; /* Center the blog cards */
-    gap: 20px; /* Reduced the gap between cards */
-    flex-wrap: wrap; /* Allow wrapping to the next line if the screen size is smaller */
-    margin: 0 auto; /* Center the entire container */
-    max-width: 1200px; /* Max width to ensure everything stays centered */
+    justify-content: center; /* Center the blog cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    max-width: 1200px; /* Set a max width to maintain structure */
+    width: 100%; /* Ensure the container spans the available width */
+    margin: 0 auto; /* Center the container within its parent */
 }
 
 .blog-card {

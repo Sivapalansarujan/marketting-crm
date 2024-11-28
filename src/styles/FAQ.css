@@ -1,61 +1,93 @@
+/* FAQ Section */
 .faq-section {
-    padding: 40px 10px;
-    text-align: center;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    background-color: #fff; /* Subtle background for contrast */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align all content */
+    gap: 30px; /* Space between heading and content */
 }
 
+/* FAQ Heading */
 .faq-heading {
-    font-size: 24px;
-    color: black;
-    margin-bottom: 40px;
+    font-size: 28px; /* Slightly larger font for prominence */
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+/* FAQ Container */
 .faq-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Space between FAQ items */
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%; /* Make it responsive to smaller screens */
+    margin: 0 auto; /* Center the container */
 }
 
+/* FAQ Item */
 .faq-item {
-    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Lighter top border */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);  /* Bottom border */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Uniform border for each FAQ item */
+    border-radius: 8px; /* Rounded corners for modern look */
     padding: 15px;
     display: flex;
-    flex-direction: column; /* Adjusted for layout */
+    flex-direction: column; /* Align question and answer vertically */
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.faq-item:hover {
+    background-color: #f0f0f0; /* Slight hover effect for feedback */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* FAQ Question */
 .faq-question {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px; /* Larger font for questions */
     color: #333;
     font-weight: bold;
-    width: 100%; /* Full width for flex container */
-    justify-content: space-between; /* Space out the question and the plus sign */
+    justify-content: space-between; /* Space out question and plus sign */
 }
 
+/* Plus Sign */
 .plus-sign {
     font-size: 20px;
-    color: #333;
-    transition: transform 0.3s ease; /* Smooth rotation */
+    color: #555;
+    transition: transform 0.3s ease; /* Smooth rotation effect */
 }
 
+/* FAQ Answer */
 .faq-answer {
     margin-top: 10px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #f7f7f7; /* Light gray background */
     border-radius: 5px;
-    font-size: 14px;
-    color: #555;
-    transition: all 0.3s ease; /* Smooth transition for appearing answers */
+    font-size: 15px;
+    color: #666;
+    display: none; /* Hidden by default */
+    line-height: 1.6;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.faq-question.active {
-    color: #0056b3; /* Change color when active */
+/* Active FAQ Item */
+.faq-item.active .faq-answer {
+    display: block; /* Ensure it's visible */
+    opacity: 1;
+    transform: scaleY(1); /* Animate the pop-up effect */
 }
 
-.faq-question.active .plus-sign {
-    transform: rotate(90deg); /* Rotate the plus sign into X */
+.faq-item.active .faq-question {
+    color: #EF3237; /* Highlight active question */
+}
+
+.faq-item.active .plus-sign {
+    transform: rotate(90deg); /* Turn plus into an "X" */
 }

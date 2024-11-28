@@ -1,111 +1,181 @@
-/* src/styles/plans.css */
-
 /* Container styling */
 .plans-container {
-    background: url('../assets/pricing_bg.png') no-repeat center center/cover; /* Fixed path for CSS */
-    padding: 350px 150px;
-    text-align: center;
-    color: #fff;
-    margin-top: -140px;
-  }
-  
-  /* Header section */
-  .plans-header .sub-heading {
-    font-size: 18px;
-    color: #ffc04d;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  
-  .plans-header .main-heading {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #000000;
-  }
-  
-  /* Grid layout for plans sections */
+  background: url('../assets/pricing_bg.png') no-repeat center center/cover; /* Background image */
+  padding: 330px 20px; /* Adjusted padding for better spacing on smaller screens */
+  text-align: center;
+  color: #fff;
+  margin-top: -120px;
+}
+
+/* Header section */
+.plans-header .sub-heading {
+  font-size: 18px;
+  color: #ffc04d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.plans-header .main-heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+/* Grid layout for plans sections */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+  gap: 20px;
+  margin-top: 0px;
+  width: 80%;
+  margin-left: auto; /* Automatically set margins to balance */
+  margin-right: auto;
+}
+
+
+/* Individual section styling */
+.plans-section {
+  display: flex; /* Flexbox layout for left and right sections */
+  flex-direction: row; /* Default to column for mobile */
+  padding: 20px;
+  border-radius: 10px;
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section */
+.left-section {
+  width: 100%; /* Full width for smaller screens */
+  margin-bottom: 20px; /* Space below the left section */
+}
+
+.left-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.left-section .features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-section .features-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #B40508 0%, #F36637 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #ffc04d;
+  color: #ffffff;
+}
+
+/* Right Section */
+.right-section {
+  width: 100%; /* Full width for smaller screens */
+  padding-left: 20px;
+}
+
+.right-section .bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-section .bullet-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000; /* Text color for list items */
+}
+
+.right-section .bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #EF3237 0%, #F36637 100%);
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+
+/* Tablet or smaller screens */
+@media (max-width: 1024px) {
   .plans-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+      grid-template-columns: 1fr; /* Stack the plans vertically */
   }
-  
-  /* Individual section styling */
+
   .plans-section {
-    display: flex; /* To place left and right sections side by side */
-    padding: 20px;
-    border-radius: 10px;
-    color: #000000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      flex-direction: column; /* Ensure sections are stacked on mobile/tablet */
   }
-  
-  /* Left Section */
-  .left-section {
-    width: 40%; /* Allocate 40% for the left content */
-  }
-  
-  .left-section h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .left-section .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .left-section .features-list li {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .buy-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #B40508 0%, #F36637 100%);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buy-button:hover {
-    background-color: #ffc04d;
-    color: #ffffff;
-  }
-  
-  /* Right Section */
+
+  .left-section,
   .right-section {
-    width: 60%; /* Allocate 60% for the right bullets */
-    padding-left: 20px;
+      width: 100%; /* Ensure full width */
+      padding: 0;
   }
-  
-  .right-section .bullet-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  .buy-button {
+      width: 100%; /* Button takes full width on smaller screens */
   }
-  
+
+  .left-section h3 {
+      font-size: 22px; /* Adjust font size for smaller screens */
+  }
+
+  .left-section .features-list li {
+      font-size: 14px; /* Adjust font size for mobile */
+  }
+
   .right-section .bullet-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #000; /* Text color for list items */
+      font-size: 14px; /* Adjust font size for mobile */
   }
-  
-  .right-section .bullet {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #EF3237 0%, #F36637 100%);
+}
+
+/* Mobile or very small screens */
+@media (max-width: 480px) {
+  .plans-container {
+      padding: 100px 20px; /* Reduce padding */
   }
-  
+
+  .plans-header .sub-heading {
+      font-size: 16px; /* Smaller sub-heading for mobile */
+  }
+
+  .plans-header .main-heading {
+      font-size: 28px; /* Smaller main-heading for mobile */
+  }
+
+  .buy-button {
+      padding: 12px 25px; /* Adjust button size */
+      font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .left-section h3 {
+      font-size: 20px; /* Smaller heading for mobile */
+  }
+
+  .left-section .features-list li {
+      font-size: 14px; /* Smaller feature list font */
+  }
+
+  .right-section .bullet-list li {
+      font-size: 14px; /* Smaller font for bullet points */
+  }
+}

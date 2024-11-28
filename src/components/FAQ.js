@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import '../styles/FAQ.css';
 
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null); // Track which question is active
+  const [activeIndex, setActiveIndex] = useState(null);
 
+  // Toggle the visibility of the answer
   const toggleAnswer = (index) => {
-    setActiveIndex(activeIndex === index ? null : index); // Toggle the answer visibility
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   const faqData = [
@@ -23,9 +24,12 @@ const FAQ = () => {
       <h2 className="faq-heading">Frequently Asked Questions</h2>
       <div className="faq-container">
         {faqData.map((item, index) => (
-          <div key={index} className="faq-item">
-            <div 
-              className={`faq-question ${activeIndex === index ? 'active' : ''}`}
+          <div
+            key={index}
+            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+          >
+            <div
+              className="faq-question"
               onClick={() => toggleAnswer(index)}
             >
               {item.question}
@@ -33,11 +37,9 @@ const FAQ = () => {
                 {activeIndex === index ? 'X' : '+'}
               </div>
             </div>
-            {activeIndex === index && (
-              <div className="faq-answer">
-                {item.answer}
-              </div>
-            )}
+            <div className={`faq-answer ${activeIndex === index ? 'visible' : ''}`}>
+              {item.answer}
+            </div>
           </div>
         ))}
       </div>
