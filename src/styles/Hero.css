@@ -1,11 +1,13 @@
 /* src/styles/Hero.css */
 .hero {
-  background-size: cover; /* Make the background fill the section */
-  background-position: top center; /* Align the background to the top center */
-  background-repeat: no-repeat; /* Prevent background tiling */
+  background-size: cover; /* Ensure the background image covers the whole section */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background from repeating */
   padding: 50px 0; /* Maintain padding for content spacing */
   background-image: url('../assets/Rectangle.png');
-  margin-top: -100px; /* Move the hero section upwards */
+  margin-top: -260px; /* Move the hero section upwards */
+  height: 100vh; /* Set height to cover the full viewport height */
+  
 }
 
 .hero-content {
@@ -23,6 +25,7 @@
 
 .hero-heading {
   font-size: 3rem;
+  margin-top: 220px;
   margin-bottom: 100px;
   color: #1f0505;
 }
@@ -58,7 +61,8 @@
   display: block;
   position: relative; /* Enable offset adjustments */
   right: 50%; /* Move towards the left */
-  top: 125px; /* Move towards the bottom */
+  top: 155px; /* Move towards the bottom */
+  margin-top: -50px;
 }
 
 .group-img {
@@ -74,6 +78,11 @@
 
 /* Responsive Design - Adjustments for smaller screens */
 @media (max-width: 1024px) {
+  .hero {
+    height: 80vh; /* Adjust height for smaller screens */
+    background-position: top center; /* Move the background image upwards */
+  }
+
   .hero-content {
     flex-direction: column; /* Stack left and right columns vertically */
     align-items: center; /* Center the content */
@@ -113,6 +122,11 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 75vh; /* Further reduce height on smaller screens */
+    background-position: top center; /* Adjust background position upwards */
+  }
+
   .hero-content {
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center content */
@@ -146,6 +160,11 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    height: 70vh; /* Reduce height further on very small screens */
+    background-position: top center; /* Ensure the image moves upwards on small screens */
+  }
+
   .hero-content {
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center content */

@@ -3,9 +3,10 @@
   display: flex; /* Flexbox layout for horizontal arrangement */
   justify-content: space-between; /* Distribute boxes evenly */
   gap: 0; /* Remove space between icon boxes */
-  margin: 200px auto; /* Center the container and add margin */
+  margin: 240px auto; /* Center the container and add margin */
   max-width: 1100px; /* Max width for responsiveness */
   padding: 0 20px; /* Add horizontal padding */
+  
 }
 
 /* Individual Icon Boxes */
