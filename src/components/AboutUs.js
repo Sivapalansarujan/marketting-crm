@@ -11,11 +11,16 @@ const AboutUs = () => {
         {/* Left Column */}
         <div className="about-left-column">
           <h3 className="about-subheading">About Us</h3>
-          <h2 className="about-heading">Empowering Businesses with Smart Solutions</h2>
+          <h2 className="about-heading">With our AI-powered Marketing CRM, businesses can simplify 
+            marketing automation, gain deep customer insights, and deliver 
+            personalized experiences at scale.</h2>
           <p className="about-text">
-          Founded with a mission to empower businesses, our company has been delivering innovative CRM solutions that blend simplicity with powerful customization. 
-          We believe in making customer management easy and efficient for teams of all sizes.Our CRM stands out for its intuitive interface, adaptable features, 
-          and seamless integrations that cater to your unique workflow needs.
+          The platform is made for both new organizations and established brands and 
+          thus makes it possible for everyone to be heard at the right time through 
+          the right place and messages. Allow the power of customer data to help you 
+          make informed decisions, improve return on investment, and scale. 
+          Join thousands of businesses today using our CRM to drive further 
+          engagement and loyalty.
           </p>
           <button className="about-btn">Read More</button>
         </div>

@@ -4,8 +4,11 @@
   justify-content: space-between; /* Distribute boxes evenly */
   gap: 0; /* Remove space between icon boxes */
   margin: 240px auto; /* Center the container and add margin */
-  max-width: 1100px; /* Max width for responsiveness */
+  max-width: 1000px; /* Max width for responsiveness */
   padding: 0 20px; /* Add horizontal padding */
+  height:350px;
+  margin-top: 250px;
+  margin-bottom: 100px;
   
 }
 

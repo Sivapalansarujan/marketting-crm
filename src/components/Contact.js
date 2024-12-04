@@ -29,7 +29,7 @@ const Contact = () => {
             <img src={mapIcon} alt="Location" />
             <span>123 Address, City</span>
           </div>
-          
+
           {/* Map iframe moved here */}
           <div className="contact-map">
             <iframe

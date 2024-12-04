@@ -10,13 +10,17 @@ const FAQ = () => {
   };
 
   const faqData = [
-    { question: "What is React?", answer: "React is a JavaScript library for building user interfaces." },
-    { question: "What is JSX?", answer: "JSX is a syntax extension for JavaScript, which allows HTML-like code in JavaScript." },
-    { question: "How do I create a component?", answer: "You can create a component by defining a function or class that returns JSX." },
-    { question: "What are props in React?", answer: "Props are arguments passed into React components to provide data." },
-    { question: "What is the Virtual DOM?", answer: "The Virtual DOM is a lightweight copy of the real DOM that React uses to optimize updates." },
-    { question: "What are hooks in React?", answer: "Hooks are functions that let you use state and other React features in functional components." },
-    { question: "What is Redux?", answer: "Redux is a state management tool often used with React." },
+    { question: "What is Marketing CRM?", 
+      answer: "A marketing CRM streamlines customer interactions, incorporates automated tasks, and integrates data across pipelines simply to provide personalized experiences and lead to better performance." },
+    { question: "How can an AI-powered CRM improve my marketing strategy?", 
+      answer: "AI-powered CRM analyzes customer data to predict future behavior, helps in automating personalized campaigns, and optimizes marketing efforts toward smarter decisions, timely engagement, and a better return on this investment." },
+    { question: "Can I integrate CRM with my existing tools?", 
+      answer: "Of course, yes you can, our CRM is seamlessly integrated with email, social media, and sales tools for a smooth, comprehensive experience." },
+    { question: " How secure is my customer data on your platform?",
+       answer: "Your data is safely secured with the finest level of encryption and with all the required security measures in the industry, making it completely safe, private, and compliant." },
+    { question: "Is training available for using the CRM?",
+       answer: "Of course! We have extensive onboarding and training for you to take full advantage of our CRM. You can also reach out to our customer support team for any questions or concerns that you may have." },
+    ,
   ];
 
   return (

@@ -1,17 +1,14 @@
-/* src/components/Contact.css */
-
 /* Default for desktop view */
 .contact-container {
   display: flex;
   max-width: 1200px;
-  min-height: 600px;  /* Minimum height for desktop view */
   margin: 0 auto;
   padding: 40px;
   flex-direction: column;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
   margin-top: 100px;
-  margin-bottom: 20px; /* Space between sections */
-  height: auto; /* Auto-adjust height based on content */
+  margin-bottom: 0; /* Adjust to remove unnecessary bottom margin */
+  height: auto;
 }
 
 /* Contact Info Section */
@@ -19,24 +16,26 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  flex-wrap: wrap; /* Allow items to stack on smaller screens */
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align the items at the top */
+  width: 100%; /* Ensure the section takes full width */
 }
 
 .contact-info-left {
-  position: relative;
-  width: 40%; /* Default width for large screens */
-  height: 450px; /* Set height for large screens */
-  min-height: 300px;
+  width: 43%;  /* Adjust width for better space allocation */
+  height: 550px; 
   background-color: white;
   border: 1px solid #ffcccc;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 8px;
+  box-sizing: border-box; /* Ensures padding is inside the element's width */
 }
 
 .contact-info-right {
-  width: 55%; /* Default width for large screens */
+  width: 55%;  /* Adjust width for better space allocation */
   padding-left: 15px;
+  box-sizing: border-box; /* Ensures padding is inside the element's width */
 }
 
 /* Form section inside contact-info-right */
@@ -49,12 +48,8 @@
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 8px;
-  position: relative;
-  left: -30px;
-  z-index: 1;
 }
 
-/* Form row styling */
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -73,9 +68,8 @@
   margin-bottom: 20px;
 }
 
-.form-row input,
-.contact-form select {
-  width: 48%; /* Make the input and select fields fit side by side */
+.form-row input {
+  width: 48%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -85,7 +79,6 @@
   width: 96%;
 }
 
-/* Make the select element take full width */
 .contact-form select {
   width: 100%;
 }
@@ -110,7 +103,6 @@
   color: green;
 }
 
-/* Textarea styling */
 textarea {
   width: 100%;
   height: 150px;
@@ -147,79 +139,68 @@ textarea {
 /* Responsive Design - Adjustments for smaller screens */
 @media (max-width: 1024px) {
   .contact-container {
-    min-height: 800px; /* Increased height for medium screens */
-    padding: 20px; /* Reduce padding for smaller screens */
-    margin-bottom: 40px; /* Space between the Contact section and Footer */
+    min-height: 800px; /* Adjusted height for medium screens */
+    padding: 20px;
+    margin-bottom: 40px;
   }
 
   .contact-info-left {
-    width: 48%; /* Adjust to 48% for medium screens */
+    width: 48%; /* Adjust width to 48% on medium screens */
   }
 
   .contact-info-right {
-    width: 48%; /* Adjust to 48% for medium screens */
-    padding-left: 0; /* Remove left padding for better alignment */
+    width: 48%; /* Adjust width to 48% on medium screens */
+    padding-left: 0;
   }
 
   .contact-form {
-    left: 0; /* Align form to the left */
+    left: 0;
   }
 }
 
-/* For small screens like phones (768px) */
 @media (max-width: 768px) {
-  .contact-info-left,
-  .contact-info-right {
-    width: 100%; /* Stack the contact info and form sections */
-    padding-left: 0; /* Remove padding */
-  }
-
-  .contact-form {
-    left: 0; /* Remove left offset */
+  .contact-info-left, .contact-info-right {
+    width: 100%;
+    padding-left: 0;
   }
 
   .form-row {
-    flex-direction: column; /* Stack form fields vertically */
+    flex-direction: column;
     gap: 10px;
   }
 
-  .form-row input,
-  .contact-form select {
-    width: 100%; /* Full width for inputs and selects */
-  }
-
   .submit-button {
-    width: 100%; /* Make the submit button full-width */
-    margin-left: 0; /* Remove left margin */
-  }
-
-  .contact-container {
-    margin-bottom: 40px; /* Ensure there is enough space for small screens */
+    width: 100%;
   }
 }
 
-/* For very small screens like phones (480px) */
 @media (max-width: 480px) {
   .contact-container {
-    padding: 10px; /* Reduce padding for very small screens */
-    margin-bottom: 40px; /* Add space between Contact section and Footer on mobile */
+    padding: 10px;
   }
 
-  .contact-info-left,
-  .contact-info-right {
-    width: 100%; /* Stack both sections on top of each other */
+  .contact-info-left, .contact-info-right {
+    width: 100%;
   }
 
   .contact-form {
-    left: 0; /* Align form properly */
+    left: 0;
   }
 
   .form-row {
-    flex-direction: column; /* Stack form fields vertically */
+    flex-direction: column;
     gap: 8px;
   }
 
   .contact-form textarea {
-    width: 100%; /* Ensure textarea is full width */
+    width: 100%;
   }
+}
+
+/* Contact item styling */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 50px;
 }

@@ -41,6 +41,12 @@
   border-radius: 10px;
   color: #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plans-section:hover {
+  transform: scale(1.05); /* Zoom-out effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* Left Section */
@@ -98,10 +104,10 @@
 
 .right-section .bullet-list li {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-top: 30px;
+  font-size: 14px;
   color: #000; /* Text color for list items */
+  text-align: left;
 }
 
 .right-section .bullet {

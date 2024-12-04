@@ -9,12 +9,13 @@ body {
 /* Testimonial Section */
 .testimonial-section {
   position: relative;
-  max-width: 900px;
-  padding: 40px 20px; /* Added padding for mobile responsiveness */
+  max-width: 1000px;
+  padding: 10px 20px;
   margin: auto;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /* Heading */
@@ -29,84 +30,53 @@ body {
 /* Testimonial Container */
 .testimonial-container {
   display: flex;
-  flex-wrap: wrap; /* Added for better responsiveness */
-  align-items: flex-start;
-  gap: 20px;
-  position: relative;
-  justify-content: center; /* Ensures proper alignment for smaller screens */
+  gap: 10px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 /* Individual Testimonial Card */
 .testimonial-card {
   flex: 1;
-  max-width: 400px; /* Prevents cards from stretching too wide */
-  background: #fff;
+  min-width: 280px;
+  max-width: 33.333%;
+  height: 420px;
+  background: linear-gradient(181deg, #f36637 72.27%, #b40508);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   position: relative;
   text-align: left;
-  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-/* Speech Bubble Effect */
-.testimonial-card::after {
-  content: '';
+/* Profile Image */
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
   position: absolute;
-  top: 100%;
+  bottom: 5px;
   left: 20px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  transform: rotate(45deg);
-  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.3s ease;
 }
 
 /* Text */
 .testimonial-text {
   font-size: 16px;
   font-style: italic;
-  color: #555;
+  color: #fff;
   margin: 10px 0;
   line-height: 1.6;
+  height: 250px; /* Limit the height */
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
-/* Name and Role */
-.testimonial-name {
-  font-weight: bold;
-  font-size: 18px;
-  color: #333;
-}
-
-.testimonial-role {
-  font-size: 14px;
-  color: #777;
-}
-
-/* Profile Image */
-.profile-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  object-fit: cover;
-  position: absolute;
-  bottom: -30px;
-  left: 20px;
-}
-
-/* Background Shape */
-.background-shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  opacity: 0.1; /* Makes the background shape more subtle */
+.testimonial-text.show {
+  height: auto; /* Show full text when hovered */
 }
 
 /* Navigation Buttons */
@@ -135,71 +105,54 @@ body {
 }
 
 .nav-buttons button:hover {
-  background-color: #555; /* Add a hover effect */
+  background-color: #555;
 }
 
 /* Responsive Design */
-
-/* Tablet or smaller screens */
 @media (max-width: 1024px) {
   .testimonial-container {
-      flex-direction: column; /* Stack the testimonials vertically */
-      gap: 20px; /* Add space between stacked testimonials */
+    flex-direction: column;
+    gap: 20px;
   }
 
   .testimonial-card {
-      max-width: 100%; /* Ensure cards are full width on smaller screens */
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow */
+    max-width: 100%;
+    height:auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 
   .profile-image {
-      width: 50px; /* Adjust profile image size */
-      height: 50px;
-      bottom: -25px; /* Adjust positioning */
-  }
-
-  .background-shape {
-      width: 200px;
-      height: 200px;
-      top: -20px; /* Adjust position for smaller screens */
-  }
-
-  .nav-buttons {
-      top: auto;
-      bottom: 20px; /* Place nav buttons at the bottom on mobile */
-      right: 50%;
-      transform: translateX(50%);
-      flex-direction: row; /* Arrange buttons horizontally on mobile */
-      gap: 15px;
+    width: 50px;
+    height: 50px;
+   
   }
 }
 
-/* Mobile screens */
 @media (max-width: 768px) {
   .testimonial-heading {
-      font-size: 22px; /* Smaller font size for mobile */
+    font-size: 22px;
   }
 
   .testimonial-text {
-      font-size: 14px; /* Adjust text size for better readability */
+    font-size: 14px;
   }
 
   .testimonial-name {
-      font-size: 16px; /* Smaller name font */
+    font-size: 16px;
   }
 
   .testimonial-role {
-      font-size: 12px; /* Smaller role font */
+    font-size: 12px;
   }
 
   .profile-image {
-      width: 50px;
-      height: 50px;
-      bottom: -25px;
-  }
-  
+    width: 50px;
+    height: 50px;
+    }
+
   .testimonial-card {
-      padding: 15px; /* Reduced padding for mobile */
+    padding: 15px;
+    height:auto;
   }
 }

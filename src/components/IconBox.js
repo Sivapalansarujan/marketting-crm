@@ -7,18 +7,18 @@ const IconBox = () => {
   const iconBoxes = [
     {
       icon: iconbox_1, // Custom icon for Sales Tracking
-      title: 'Sales Tracking',
-      description: 'Track and analyze your sales performance.',
+      title: 'Automated Campaigns',
+      description: 'Personalize and automate emails, SMSs, and social campaigns.',
     },
     {
       icon: iconbox_2, // Custom icon for Contact Management
-      title: 'Contact Management',
-      description: 'Organize and manage customer contacts effectively.',
+      title: '360° Customer View',
+      description: 'Personalized journeys to generate powerful customer interactions.',
     },
     {
       icon: iconbox_1, // Custom icon for Automated Workflows
-      title: 'Automated Workflows',
-      description: 'Create automated workflows to enhance efficiency.',
+      title: 'Predictive Analytics',
+      description: 'Predict, strategize, and drive decisions more intelligently.',
     },
   ];
 

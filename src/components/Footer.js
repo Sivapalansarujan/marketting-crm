@@ -1,4 +1,6 @@
+// src/components/Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
 import '../styles/Footer.css'; // Import the CSS file for styling
 import logo from '../assets/logo.png'; // Replace with the actual logo path
 
@@ -38,11 +40,11 @@ const Footer = () => {
           <ul className="footer-links">
             <li>About Us</li>
             <li>Contact</li>
-            <li>Services</li>
             <li>Blog</li>
             <li>Careers</li>
             <li>FAQ</li>
-            <li>Support</li>
+            <li><Link to="/checkout">Checkout</Link></li>
+            <li><Link to="/signup">Sign Up</Link></li> {/* Connect Sign Up link */}
           </ul>
         </div>
 

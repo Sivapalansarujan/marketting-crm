@@ -11,11 +11,12 @@ function Hero() {
       <img src={groupImage} alt="Decorative Group" className="group-img" />
         <div className="hero-content">
           <div className="left-column">
-            <h2 className="hero-heading">REVOLUTIONIZE YOUR CUSTOMER MANGEMENT </h2>
+            <h2 className="hero-heading">Unlock the Power of Customer Engagement with Our CRM Solution </h2>
             <p className="hero-text">
-              Streaming your sales and enhance customes satisfaction with our
-              powerful CRM solutions. Streamline your sales and enhance customer satisfaction with our powerful
-              CRM solutions
+            Leverage data driven insights and personalization for engagement, retention, 
+            and growth among customers.Our next generation Marketing CRM platform allows 
+            you to make value added connections with your customers, efficiently run your 
+            campaigns, and deliver measurable results at every touchpoint. 
             </p>
             <button className="hero-btn">get started</button>
           </div>
