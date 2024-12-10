@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Signup.css'; 
-import frameImage from '../assets/Frame.svg'; // Use the imported frame image
+import frameImage from '../assets/signup.png'; 
 
 function Signup() {
   const [formData, setFormData] = useState({

@@ -1,3 +1,4 @@
+// src/components/HowItWorks.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/HowItWorks.css';
@@ -8,7 +9,7 @@ import hiw_3 from '../assets/hiw_3.png';
 
 const HowItWorks = () => {
   return (
-    <div className="how-it-works">
+    <div className="how-it-works" id="howitworks">
       {/* First container */}
       <div className="first-container">
         <div className="heading-container">
@@ -37,7 +38,7 @@ const HowItWorks = () => {
             className="section section2"
             initial={{ opacity: 0, y: -100 }} // Increased falling height (y: -100)
             whileInView={{ opacity: 1, y: 0 }} // Falling animation
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
             viewport={{ once: true }} // Trigger animation only once when the image comes into view
           >
             <img src={hiw_1} alt="Image 1" className="section-image" />
@@ -50,7 +51,7 @@ const HowItWorks = () => {
             className="section section2"
             initial={{ opacity: 0, y: -100 }} // Increased falling height (y: -100)
             whileInView={{ opacity: 1, y: 0 }} // Falling animation
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
             viewport={{ once: true }} // Trigger animation only once when the image comes into view
           >
             <img src={hiw_2} alt="Image 2" className="section-image" />
@@ -77,7 +78,7 @@ const HowItWorks = () => {
             className="section section2"
             initial={{ opacity: 0, y: -100 }} // Increased falling height (y: -100)
             whileInView={{ opacity: 1, y: 0 }} // Falling animation
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
             viewport={{ once: true }} // Trigger animation only once when the image comes into view
           >
             <img src={hiw_3} alt="Image 3" className="section-image" />

@@ -1,22 +1,23 @@
 import React from 'react';
-import '../styles/IconBox.css'; // Import the CSS file for the icon boxes
-import iconbox_1 from '../assets/iconbox_1.png'; // Import custom icon 1
-import iconbox_2 from '../assets/iconbox_2.png'; // Import custom icon 2
+import '../styles/IconBox.css'; 
+import iconbox_1 from '../assets/box_1.svg'; 
+import iconbox_2 from '../assets/box_2.svg'; 
+import iconbox_3 from '../assets/box_3.svg'; 
 
 const IconBox = () => {
   const iconBoxes = [
     {
-      icon: iconbox_1, // Custom icon for Sales Tracking
+      icon: iconbox_1, 
       title: 'Automated Campaigns',
       description: 'Personalize and automate emails, SMSs, and social campaigns.',
     },
     {
-      icon: iconbox_2, // Custom icon for Contact Management
+      icon: iconbox_2, 
       title: '360° Customer View',
       description: 'Personalized journeys to generate powerful customer interactions.',
     },
     {
-      icon: iconbox_1, // Custom icon for Automated Workflows
+      icon: iconbox_3, 
       title: 'Predictive Analytics',
       description: 'Predict, strategize, and drive decisions more intelligently.',
     },

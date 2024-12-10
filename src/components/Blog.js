@@ -1,65 +1,58 @@
 // src/components/Blog.js
 import React from 'react';
-import '../styles/Blog.css'; // Corrected path
-import blogImage from '../assets/blog.png'; // Import background image
+import '../styles/Blog.css';
+import blogImage from '../assets/blogn1.png';
+import blogImage2 from '../assets/blogn2.png';
+import blogImage3 from '../assets/blogn3.png';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
-    <div className="blog-section">
-      <h2 className="blog-heading">Our Latest Blog Posts</h2>
-      <div className="blog-container">
-        <div className="blog-card">
-          <div
-            className="blog-card-background"
-            style={{ backgroundImage: `url(${blogImage})` }}
-          ></div>
-          <div className="blog-card-content">
-            <div className="blog-card-footer">
-              <p className="blog-writer">By John Doe</p>
-              <p className="blog-comments">12 Comments</p>
+    <section id="blog">
+      <div className="blog-section">
+        <h2 className="blog-heading">Our Latest Blog Posts</h2>
+        <div className="blog-container">
+          <div className="blog-card">
+            <div
+              className="blog-card-background"
+              style={{ backgroundImage: `url(${blogImage})` }}
+            ></div>
+            <div className="blog-card-content">
+              <p className="blog-description">
+              The Ultimate Guide to Marketing CRM: What It Is and Why Your Business Needs It
+              </p>
+              <Link to="/blog1" className="read-more-btn">Read More</Link>
             </div>
-            <p className="blog-description">
-              This is a brief description of the blog post. It gives an idea about the content of the post.
-            </p>
-            <button className="read-more-btn">Read More</button>
           </div>
-        </div>
 
-        <div className="blog-card">
-          <div
-            className="blog-card-background"
-            style={{ backgroundImage: `url(${blogImage})` }}
-          ></div>
-          <div className="blog-card-content">
-            <div className="blog-card-footer">
-              <p className="blog-writer">By Jane Smith</p>
-              <p className="blog-comments">8 Comments</p>
+          <div className="blog-card">
+            <div
+              className="blog-card-background"
+              style={{ backgroundImage: `url(${blogImage2})` }}
+            ></div>
+            <div className="blog-card-content">
+              <p className="blog-description">
+              5 Ways AI in CRM Is Revolutionizing Marketing Strategies
+              </p>
+              <Link to="/blog2" className="read-more-btn">Read More</Link>
             </div>
-            <p className="blog-description">
-              This is a brief description of the blog post. It gives an idea about the content of the post.
-            </p>
-            <button className="read-more-btn">Read More</button>
           </div>
-        </div>
 
-        <div className="blog-card">
-          <div
-            className="blog-card-background"
-            style={{ backgroundImage: `url(${blogImage})` }}
-          ></div>
-          <div className="blog-card-content">
-            <div className="blog-card-footer">
-              <p className="blog-writer">By Alex Brown</p>
-              <p className="blog-comments">5 Comments</p>
+          <div className="blog-card">
+            <div
+              className="blog-card-background"
+              style={{ backgroundImage: `url(${blogImage3})` }}
+            ></div>
+            <div className="blog-card-content">
+              <p className="blog-description">
+              How to Personalize Marketing Campaigns Using CRM Data
+              </p>
+              <Link to="/blog3" className="read-more-btn">Read More</Link>
             </div>
-            <p className="blog-description">
-              This is a brief description of the blog post. It gives an idea about the content of the post.
-            </p>
-            <button className="read-more-btn">Read More</button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

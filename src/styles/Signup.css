@@ -4,6 +4,7 @@
   min-height: 90vh;
   flex-wrap: nowrap; /* Prevent stacking unless on smaller screens */
   justify-content: space-between; /* Align sections to their respective sides */
+
 }
 
 .left-side {
@@ -18,8 +19,7 @@
   width: 100%; /* Ensures the image takes up full available width */
   max-width: none; /* Remove max-width limitation */
   height: auto; /* Maintain aspect ratio */
-  transform: scale(2.1);
-  margin-right: 500px;
+  transform: scale(1.1);
   margin-bottom: 50px;
 }
 

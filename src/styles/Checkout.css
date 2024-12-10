@@ -5,6 +5,7 @@
   padding: 60px;
   font-family: Arial, sans-serif;
   justify-content: space-between; /* Align sections on their sides */
+  margin-top: 0;
 }
 
 .pricing-plans {

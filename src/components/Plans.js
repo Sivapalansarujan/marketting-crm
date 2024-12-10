@@ -1,55 +1,72 @@
-// src/components/Plans.js
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import '../styles/plans.css'; // Import the CSS file
 import groupImage from '../assets/pricing_bg.png'; // Import the background image
 
 const Plans = () => {
+  const navigate = useNavigate(); // Initialize the navigation function
+
   const plansData = [
     {
+      id: 1,
       color: "#FFFFFF",
       title: "Basic Plan",
-      features: ["49$ / Month", " Ideal for small businesses getting started with CRM."],
+      features: ["49$ / Month"], // Keep only the price
       bullets: [
         "Up to 10 Users",
-         "Unlimited Deals, Tasks & Documents", 
-         "Basic Sales Tracking & Reporting", 
-         "Email Support"],
+        "Unlimited Deals, Tasks & Documents",
+        "Basic Sales Tracking & Reporting",
+        "Email Support",
+      ],
     },
     {
+      id: 2,
       color: "#FFFFFF",
       title: "Standard Plan",
-      features: ["99$ / Month", "Perfect for growing teams looking for more advanced features."],
+      features: ["99$ / Month"], // Keep only the price
       bullets: [
-         "Up to 50 Users", 
-        "Advanced Sales & Pipeline Tracking", 
-         "Marketing Automation (Email & SMS)", 
-         "Priority Support"],
+        "Up to 50 Users",
+        "Advanced Sales & Pipeline Tracking",
+        "Marketing Automation (Email & SMS)",
+        "Priority Support",
+      ],
     },
     {
+      id: 3,
       color: "#FFFFFF",
       title: "Premium Plan",
-      features: ["149$ / Month", "Designed for larger teams with enterprise-level needs."],
+      features: ["149$ / Month"], // Keep only the price
       bullets: [
-         "Up to 100 Users",
-          "Customizable Workflows & Automations",
-            "Predictive Analytics & Reporting", 
-            "Dedicated Account Manager"],
+        "Up to 100 Users",
+        "Customizable Workflows & Automations",
+        "Predictive Analytics & Reporting",
+        "Dedicated Account Manager",
+      ],
     },
     {
+      id: 4,
       color: "#FFFFFF",
       title: "Ultimate Plan",
-      features: ["199$ / Month", "For businesses that need the full power of CRM with custom features."],
-      bullets: ["Unlimited Users", 
+      features: ["199$ / Month"], // Keep only the price
+      bullets: [
+        "Unlimited Users",
         "Full CRM Customization & Integrations",
-          "Advanced AI-Powered Insights & Forecasting",
-           "24/7 Premium Support & Onboarding"],
+        "Advanced AI-Powered Insights & Forecasting",
+        "24/7 Premium Support & Onboarding",
+      ],
     },
   ];
 
+  const handleBuyPlan = (plan) => {
+    // Navigate to Checkout with the selected plan details
+    navigate("/checkout", { state: { selectedPlan: plan } });
+  };
+
   return (
     <div
+      id="plans"
       className="plans-container"
-      style={{ backgroundImage: `url(${groupImage})` }} // Dynamically set background image
+      style={{ backgroundImage: `url(${groupImage})` }}
     >
       <div className="plans-header">
         <p className="sub-heading">Affordable Plans</p>
@@ -69,7 +86,12 @@ const Plans = () => {
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
-              <button className="buy-button">Buy Plans</button>
+              <button
+                className="buy-button"
+                onClick={() => handleBuyPlan(plan)}
+              >
+                Buy Plan
+              </button>
             </div>
             <div className="right-section">
               <ul className="bullet-list">

@@ -1,0 +1,227 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin-top: 150px;
+}
+
+/* Blog container */
+.blog-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 20px;
+}
+
+/* Full-width section for the first heading and introductory paragraph */
+.full-width-section {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.content-section h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #f36637;
+  text-align: left;
+}
+
+.content-section p {
+  margin-bottom: 15px;
+  color: #555;
+  text-align: left;
+}
+
+/* Question and answer section layout */
+.qa-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.qa-container .qa-content {
+  flex: 2;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.qa-container .qa-content h2 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #b40508;
+  text-align: left;
+}
+
+/* Styling for paragraphs inside qa-content */
+.qa-container .qa-content p {
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Improved bulletin section styles */
+.qa-container .qa-content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.qa-container .qa-content ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+  list-style-type: none;
+}
+
+/* Customizing bullet points */
+.qa-container .qa-content ul li::before {
+  content: '\2022';
+  color: #f36637;
+  font-size: 22px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Styling for list items when hovered */
+.qa-container .qa-content ul li:hover {
+  background-color: #f9f9f9;
+  padding-left: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styling for strong text inside list items */
+.qa-container .qa-content ul li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+.qa-container .qa-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* General styles for images in all blogs */
+.qa-container .qa-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-top: 100px;
+}
+
+/* Override margin-top for Blog2 */
+.blog2 .qa-container .qa-image img {
+  margin-top: 175px;
+}
+
+/* Override margin-top for Blog3 */
+.blog3 .qa-container .qa-image img {
+  margin-top: 175px;
+}
+
+/* Conclusion section */
+.conclusion-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.conclusion-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .qa-container {
+    flex-direction: column;
+  }
+
+  .qa-container .qa-image {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .qa-container .qa-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .qa-container .qa-image img {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .full-width-section h1,
+  .full-width-section p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section h1 {
+    font-size: 22px;
+  }
+
+  .content-section h2 {
+    font-size: 18px;
+  }
+
+  .content-section p,
+  .content-section ul li {
+    font-size: 14px;
+  }
+
+  .qa-container .qa-content h2 {
+    font-size: 18px;
+  }
+
+  .qa-container .qa-content ul li {
+    font-size: 14px;
+  }
+
+  .qa-container .qa-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .conclusion-section p {
+    font-size: 16px;
+  }
+}

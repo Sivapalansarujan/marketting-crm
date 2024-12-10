@@ -1,249 +1,220 @@
 /* General header styles */
 header {
   background-color: transparent;
-  padding: 1rem;
-  margin-top: 100px;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 .header-container {
   display: flex;
-  align-items: center; /* Vertically align items */
-  justify-content: space-between; /* Space out logo and navigation bar */
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+  padding: 0 1rem;
+  flex-wrap: nowrap; /* Ensure everything stays on the same line */
 }
 
 /* Logo styles */
 .logo {
-  flex: 0 0 auto; /* Keep the logo's natural size */
-  width: 75px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
+  width: 75px;
+  height: auto;
+  margin-right: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Add a scaling effect on hover */
 }
 
 /* Navigation styles */
 nav {
-  flex: 1; /* Allow nav to occupy space between logo and button */
   display: flex;
-  justify-content: center; /* Center menu items */
-  align-items: center; /* Vertically align items */
-  position: relative; /* Position relative to place button inside nav */
-  margin-left: auto; /* Ensure the nav stays aligned to the left */
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
 }
 
 nav ul {
-  display: flex; /* Keep menu items inline */
+  display: flex;
   list-style: none;
-  gap: 2rem; /* Add space between menu items */
-  margin: 0; /* Remove default padding/margin */
+  gap: 2rem;
+  margin: 0;
   padding: 0;
 }
 
-nav a {
+/* Button styles for menu items */
+nav ul li button {
+  background-color: transparent;
   color: black;
-  text-decoration: none;
-  padding: 10px;
+  font-size: 14px; /* Reduced font size to 14px */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease;
+  position: relative;
 }
 
-nav a:hover {
-  text-decoration: underline; /* Add hover effect for links */
+nav ul li button:hover {
+  color: #f36637;
+  transform: translateY(-3px); /* Lift effect on hover */
 }
 
-/* Button styles */
+nav ul li button.active {
+  color: #f36637; /* Active color */
+}
+
+/* Navigation button sizes and styles */
 .nav-btn {
-  position: absolute; /* Position the button independently inside nav */
-  right: 0; /* Align button to the right edge of the nav bar */
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #B40508 0%, #F36637 120.86%); /* Gradient background */
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #b40508 0%, #f36637 120.86%);
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px; /* Optional: Add rounded corners */
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 14px; /* Reduced font size to 14px */
+  font-weight: bold;
+  margin-left: 150px;
 }
 
 .nav-btn:hover {
-  background: linear-gradient(90deg, #F36637 0%, #B40508 120.86%); /* Reversed gradient on hover */
+  background: linear-gradient(90deg, #f36637 0%, #b40508 120.86%);
+  transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
-/* Hamburger Menu Styles */
+/* Remove background from all buttons */
+nav ul li button {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Hamburger Menu */
 .hamburger-menu {
-  display: none; /* Hide by default on large screens */
-  flex-direction: column;
-  gap: 3px;
-  cursor: pointer;
-}
-
-.hamburger-menu div {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for hamburger icon */
-}
-
-/* Hamburger icon change to 'X' when active */
-.hamburger-menu.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px); /* Top bar to form part of the 'X' */
-}
-
-.hamburger-menu.active div:nth-child(2) {
-  opacity: 0; /* Hide the middle bar */
-}
-
-.hamburger-menu.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px); /* Bottom bar to form part of the 'X' */
-}
-
-/* Responsive Design - Adjustments for smaller screens */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 1rem; /* Reduce padding for medium screens */
-    flex-wrap: wrap; /* Allow logo and nav to stack if necessary */
-    justify-content: space-between; /* Space out logo and hamburger */
-  }
-
-  .logo {
-    width: 60px; /* Adjust logo size for medium screens */
-  }
-
-  nav {
-    flex: 1; /* Keep space between the logo and hamburger button */
-    justify-content: flex-start; /* Align items to the left */
-    margin-left: 0; /* Remove margin for alignment */
-  }
-
-  nav ul {
-    gap: 1.5rem; /* Reduce gap between menu items */
-  }
-
-  .nav-btn {
-    position: relative; /* Adjust button position */
-    margin-left: auto; /* Align the button to the right */
-  }
-
-  /* Show hamburger menu on small screens and hide nav */
-  .hamburger-menu {
-    display: flex; /* Show the hamburger icon */
-    position: absolute; /* Position it on the right */
-    right: 10px; /* Align to the right */
-    
-  }
-
-  /* Hide navigation menu by default on small screens */
-  nav ul {
-    display: none; 
-  }
-
-  .nav-btn {
-    display: none; /* Hide the nav button */
-  }
-
-  /* Show the menu when nav is open */
-  nav.open ul {
-    display: flex; /* Display the navigation menu */
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 1rem; /* Reduced gap */
-  }
-}
-
-/* Off-canvas menu styles for smaller screens */
-@media (max-width: 1024px) {
-  nav {
-    position: fixed; /* Fix the nav to the left side of the viewport */
-    top: 0;
-    left: -612px; /* Initially hide the nav off the screen */
-    width: 10px; /* Set the width of the sidebar */
-    height: 100vh; /* Full height of the viewport */
-    background-color: white; /* Background color for the nav */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 2rem 1rem;
-    transition: left 0.3s ease-in-out; /* Smooth sliding effect */
-    z-index: 1000; /* Make sure it stays above other content */
-  }
-
-  nav.open {
-    left: 0; /* Slide the nav into view */
-    width: 100px; 
-    background-color:rgb(255, 69, 0);
-    /* Set the width of the nav when it's open */
-}
-
-}
-
-/* Hamburger menu styles */
-.hamburger-menu {
-  position: fixed; /* Fix it at the top-right corner */
-  top: 1rem;
-  right: 1rem;
-  z-index: 1100; /* Higher z-index than nav */
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  position: relative;
+  margin-right: 20px;
 }
 
 .hamburger-menu div {
   width: 30px;
   height: 3px;
   background-color: black;
-  
-  transition: transform 0.3s ease-in-out; /* Optional animation */
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-/* Optional: Hamburger animation when active */
-.hamburger-menu.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.hamburger-menu span.close-menu {
+  font-size: 24px;
+  color: black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-20%);
+  cursor: pointer;
 }
-.hamburger-menu.active div:nth-child(2) {
-  opacity: 0;
-}
+
+.hamburger-menu.active div:nth-child(1),
+.hamburger-menu.active div:nth-child(2),
 .hamburger-menu.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  display: none; /* Hide bars when menu is active */
 }
 
-/* Show hamburger only on small screens */
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: flex; /* Show hamburger icon on small screens */
-    
-  }
-
+/* Responsive Styles */
+@media (max-width: 1024px) {
   nav ul {
-    display: none; /* Hide navigation menu on small screens */
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
 
   nav.open ul {
-    display: flex; /* Show the menu when the hamburger is active */
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 1rem; /* Reduced gap for the menu items */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align menu items */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav.open {
+    transform: translateX(0);
+    background-color: #ab2c02;
+    width: 30%;
+ 
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-btn {
+    align-self: left;
+    margin-right: 150px;
+    margin-top: 50px;
   }
 }
 
 @media (max-width: 570px) {
-  .header-container {
-    padding: 0.5rem; /* Reduce padding for very small screens */
-  }
-
   .logo {
-    width: 45px; /* Adjust logo size for very small screens */
+    width: 50px;
   }
 
-  nav {
-    width: 100%; /* Full-width navigation */
-    
-  }
-
-  nav ul {
-    gap: 1rem; /* Reduced gap */
+  nav ul li a {
+    font-size: 14px;
   }
 
   .nav-btn {
-    padding: 8px 16px; /* Smaller padding for button */
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
 
+/* Section Scroll Behavior */
+section {
+  scroll-margin-top: 100px;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Close Button Styles */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.close-btn:hover {
+  color: #f36637;
+  transform: scale(1.1); /* Optional hover effect */
+}
